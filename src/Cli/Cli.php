@@ -221,7 +221,7 @@ class Cli
     private function listActionValidate(array $actionArgs): void
     {
         if (count($actionArgs) != 1)
-            throw new InvalidArgumentException("List action requires a task id as an argument or no arguments to list all tasks");
+            throw new InvalidArgumentException("List action requires a task id as an argument or use 'list-all' action to list all tasks");
 
         if (!is_numeric($actionArgs[0]))
             throw new InvalidArgumentException("Task id must be a number");
